@@ -1,0 +1,10 @@
+SELECT TOP 1500
+   p.objid,p.ra,p.dec,p.u, p.g, p.r, p.i, p.z ,z.spiral, z.elliptical
+FROM PhotoObjAll AS p
+   JOIN zooSpec AS z ON z.objid = p.objid 
+WHERE 
+   p.petroMag_u>0 AND z.uncertain = 0 AND z.spiral = 1
+
+
+
+
